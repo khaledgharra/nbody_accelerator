@@ -48,8 +48,10 @@ set_clock_uncertainty $CLK_UNCERTAINTY [get_clocks $CLK_NAME]
 set_input_delay  0 -clock $CLK_NAME [remove_from_collection [all_inputs] [get_ports $CLK_NAME]]
 set_output_delay 0 -clock $CLK_NAME [all_outputs]
 
-# Synthesis - same basic idea as the i2c backend lab
-compile -exact_map
+# Synthesis - compile_ultra (higher effort than plain compile -exact_map)
+# to try to actually close the 1.5ns clock uncertainty margin instead of
+# just hitting the ~9.14ns floor default effort left us at.
+compile_ultra
 
 # Reports
 file mkdir reports
