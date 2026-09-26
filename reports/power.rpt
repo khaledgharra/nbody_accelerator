@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : nbody_accelerator
 Version: R-2020.09-SP2
-Date   : Sat Sep 26 19:27:35 2026
+Date   : Sat Sep 26 19:34:43 2026
 ****************************************
 
 
@@ -27,15 +27,11 @@ body_regfile           16000             tsl18fs120_typ
 nbody_core             35000             tsl18fs120_typ
 pair_rom               ForQA             tsl18fs120_typ
 fp_add                 4000              tsl18fs120_typ
-fp_mul                 4000              tsl18fs120_typ
+fp_mul                 8000              tsl18fs120_typ
 fp_sqrt                4000              tsl18fs120_typ
 fp_div                 4000              tsl18fs120_typ
 nbody_core_DW01_dec_0  ForQA             tsl18fs120_typ
-fp_div_DW01_sub_1_DW01_sub_2
-                       4000              tsl18fs120_typ
 fp_div_DW_cmp_0        4000              tsl18fs120_typ
-fp_sqrt_DW01_sub_0_DW01_sub_3
-                       4000              tsl18fs120_typ
 fp_sqrt_DW_cmp_0       4000              tsl18fs120_typ
 fp_mul_DW01_add_0_DW01_add_6
                        ForQA             tsl18fs120_typ
@@ -47,12 +43,14 @@ nbody_core_DW01_add_6_DW01_add_10
                        ForQA             tsl18fs120_typ
 fp_div_DW01_add_0_DW01_add_12
                        ForQA             tsl18fs120_typ
-fp_add_DW01_sub_3      ForQA             tsl18fs120_typ
-fp_add_DW_cmp_3        4000              tsl18fs120_typ
-fp_add_DW01_sub_4      4000              tsl18fs120_typ
-fp_add_DW01_sub_5      ForQA             tsl18fs120_typ
-fp_add_DW01_add_1      4000              tsl18fs120_typ
-fp_mul_DW_mult_uns_1   4000              tsl18fs120_typ
+fp_div_DW01_sub_3      4000              tsl18fs120_typ
+fp_sqrt_DW01_sub_1     4000              tsl18fs120_typ
+fp_add_DW01_sub_8      ForQA             tsl18fs120_typ
+fp_add_DW_cmp_9        4000              tsl18fs120_typ
+fp_mul_DW_mult_uns_8   4000              tsl18fs120_typ
+fp_add_DW01_sub_26     4000              tsl18fs120_typ
+fp_add_DW01_sub_27     4000              tsl18fs120_typ
+fp_add_DW01_add_7      4000              tsl18fs120_typ
 
 
 Global Operating Voltage = 1.8  
@@ -64,12 +62,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  14.3388 mW   (98%)
-  Net Switching Power  = 230.6615 uW    (2%)
+  Cell Internal Power  =  22.1150 mW   (98%)
+  Net Switching Power  = 348.0103 uW    (2%)
                          ---------
-Total Dynamic Power    =  14.5694 mW  (100%)
+Total Dynamic Power    =  22.4630 mW  (100%)
 
-Cell Leakage Power     = 655.3422 nW
+Cell Leakage Power     = 772.9384 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -79,9 +77,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          14.2213        4.8472e-03        3.7133e+05           14.2266  (  97.64%)
+register          21.9386        7.5127e-03        4.0566e+05           21.9465  (  97.70%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.1175            0.2258        2.8401e+05            0.3436  (   2.36%)
+combinational      0.1763            0.3405        3.6728e+05            0.5171  (   2.30%)
 --------------------------------------------------------------------------------------------------
-Total             14.3388 mW         0.2307 mW     6.5534e+05 pW        14.5702 mW
+Total             22.1149 mW         0.3480 mW     7.7294e+05 pW        22.4637 mW
 1
