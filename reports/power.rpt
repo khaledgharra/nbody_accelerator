@@ -1,14 +1,10 @@
-Loading db file '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db'
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated primary inputs. (PWR-414)
-Warning: Design has unannotated sequential cell outputs. (PWR-415)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : nbody_accelerator
 Version: R-2020.09-SP2
-Date   : Sat Sep 26 19:34:43 2026
+Date   : Sat Sep 26 19:43:02 2026
 ****************************************
 
 
@@ -24,33 +20,11 @@ Design        Wire Load Model            Library
 ------------------------------------------------
 nbody_accelerator      35000             tsl18fs120_typ
 body_regfile           16000             tsl18fs120_typ
-nbody_core             35000             tsl18fs120_typ
 pair_rom               ForQA             tsl18fs120_typ
 fp_add                 4000              tsl18fs120_typ
-fp_mul                 8000              tsl18fs120_typ
+fp_mul                 4000              tsl18fs120_typ
 fp_sqrt                4000              tsl18fs120_typ
 fp_div                 4000              tsl18fs120_typ
-nbody_core_DW01_dec_0  ForQA             tsl18fs120_typ
-fp_div_DW_cmp_0        4000              tsl18fs120_typ
-fp_sqrt_DW_cmp_0       4000              tsl18fs120_typ
-fp_mul_DW01_add_0_DW01_add_6
-                       ForQA             tsl18fs120_typ
-fp_add_DW01_inc_0_DW01_inc_4
-                       ForQA             tsl18fs120_typ
-nbody_core_DW01_add_4_DW01_add_8
-                       ForQA             tsl18fs120_typ
-nbody_core_DW01_add_6_DW01_add_10
-                       ForQA             tsl18fs120_typ
-fp_div_DW01_add_0_DW01_add_12
-                       ForQA             tsl18fs120_typ
-fp_div_DW01_sub_3      4000              tsl18fs120_typ
-fp_sqrt_DW01_sub_1     4000              tsl18fs120_typ
-fp_add_DW01_sub_8      ForQA             tsl18fs120_typ
-fp_add_DW_cmp_9        4000              tsl18fs120_typ
-fp_mul_DW_mult_uns_8   4000              tsl18fs120_typ
-fp_add_DW01_sub_26     4000              tsl18fs120_typ
-fp_add_DW01_sub_27     4000              tsl18fs120_typ
-fp_add_DW01_add_7      4000              tsl18fs120_typ
 
 
 Global Operating Voltage = 1.8  
@@ -62,12 +36,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  22.1150 mW   (98%)
-  Net Switching Power  = 348.0103 uW    (2%)
+  Cell Internal Power  =  22.8233 mW   (98%)
+  Net Switching Power  = 487.7232 uW    (2%)
                          ---------
-Total Dynamic Power    =  22.4630 mW  (100%)
+Total Dynamic Power    =  23.3110 mW  (100%)
 
-Cell Leakage Power     = 772.9384 nW
+Cell Leakage Power     = 747.3169 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -77,9 +51,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          21.9386        7.5127e-03        4.0566e+05           21.9465  (  97.70%)
+register          22.7004        1.0902e-02        3.5460e+05           22.7116  (  97.43%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.1763            0.3405        3.6728e+05            0.5171  (   2.30%)
+combinational      0.1229            0.4768        3.9271e+05            0.6001  (   2.57%)
 --------------------------------------------------------------------------------------------------
-Total             22.1149 mW         0.3480 mW     7.7294e+05 pW        22.4637 mW
+Total             22.8233 mW         0.4877 mW     7.4732e+05 pW        23.3117 mW
 1
