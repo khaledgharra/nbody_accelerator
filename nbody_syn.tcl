@@ -12,7 +12,7 @@ remove_design -all
 # Variables
 set DESIGN_NAME nbody_accelerator
 set CLK_NAME    clk
-set CLK_PERIOD  10
+set CLK_PERIOD  15
 
 # Make includes searchable from the current folder
 set_app_var search_path [concat [list . [pwd]] $search_path]
