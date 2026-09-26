@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : nbody_accelerator
 Version: R-2020.09-SP2
-Date   : Sat Sep 26 19:06:03 2026
+Date   : Sat Sep 26 19:27:35 2026
 ****************************************
 
 
@@ -31,7 +31,11 @@ fp_mul                 4000              tsl18fs120_typ
 fp_sqrt                4000              tsl18fs120_typ
 fp_div                 4000              tsl18fs120_typ
 nbody_core_DW01_dec_0  ForQA             tsl18fs120_typ
+fp_div_DW01_sub_1_DW01_sub_2
+                       4000              tsl18fs120_typ
 fp_div_DW_cmp_0        4000              tsl18fs120_typ
+fp_sqrt_DW01_sub_0_DW01_sub_3
+                       4000              tsl18fs120_typ
 fp_sqrt_DW_cmp_0       4000              tsl18fs120_typ
 fp_mul_DW01_add_0_DW01_add_6
                        ForQA             tsl18fs120_typ
@@ -43,14 +47,12 @@ nbody_core_DW01_add_6_DW01_add_10
                        ForQA             tsl18fs120_typ
 fp_div_DW01_add_0_DW01_add_12
                        ForQA             tsl18fs120_typ
+fp_add_DW01_sub_3      ForQA             tsl18fs120_typ
 fp_add_DW_cmp_3        4000              tsl18fs120_typ
-fp_div_DW01_sub_3      4000              tsl18fs120_typ
-fp_sqrt_DW01_sub_1     4000              tsl18fs120_typ
-fp_add_DW01_sub_8      ForQA             tsl18fs120_typ
-fp_mul_DW_mult_uns_2   4000              tsl18fs120_typ
-fp_add_DW01_sub_12     4000              tsl18fs120_typ
-fp_add_DW01_sub_13     ForQA             tsl18fs120_typ
-fp_add_DW01_add_4      4000              tsl18fs120_typ
+fp_add_DW01_sub_4      4000              tsl18fs120_typ
+fp_add_DW01_sub_5      ForQA             tsl18fs120_typ
+fp_add_DW01_add_1      4000              tsl18fs120_typ
+fp_mul_DW_mult_uns_1   4000              tsl18fs120_typ
 
 
 Global Operating Voltage = 1.8  
@@ -62,12 +64,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  21.7344 mW   (98%)
-  Net Switching Power  = 347.4059 uW    (2%)
+  Cell Internal Power  =  14.3388 mW   (98%)
+  Net Switching Power  = 230.6615 uW    (2%)
                          ---------
-Total Dynamic Power    =  22.0818 mW  (100%)
+Total Dynamic Power    =  14.5694 mW  (100%)
 
-Cell Leakage Power     = 712.7377 nW
+Cell Leakage Power     = 655.3422 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -77,9 +79,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          21.5578        7.4351e-03        3.7732e+05           21.5656  (  97.66%)
+register          14.2213        4.8472e-03        3.7133e+05           14.2266  (  97.64%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.1765            0.3400        3.3542e+05            0.5169  (   2.34%)
+combinational      0.1175            0.2258        2.8401e+05            0.3436  (   2.36%)
 --------------------------------------------------------------------------------------------------
-Total             21.7343 mW         0.3474 mW     7.1274e+05 pW        22.0825 mW
+Total             14.3388 mW         0.2307 mW     6.5534e+05 pW        14.5702 mW
 1

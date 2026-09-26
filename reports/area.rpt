@@ -3,7 +3,7 @@
 Report : area
 Design : nbody_accelerator
 Version: R-2020.09-SP2
-Date   : Sat Sep 26 19:06:02 2026
+Date   : Sat Sep 26 19:27:34 2026
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     tsl18fs120_typ (File: /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
 
 Number of ports:                         1748
-Number of nets:                         16366
-Number of cells:                        14452
-Number of combinational cells:          11579
+Number of nets:                         15082
+Number of cells:                        13067
+Number of combinational cells:          10193
 Number of sequential cells:              2822
 Number of macros/black boxes:               0
-Number of buf/inv:                       3352
+Number of buf/inv:                       2808
 Number of references:                      23
 
-Combinational area:              16972.500000
-Buf/Inv area:                     2877.750000
-Noncombinational area:           15908.750000
+Combinational area:              15391.500000
+Buf/Inv area:                     2360.750000
+Noncombinational area:           15938.500000
 Macro/Black Box area:                0.000000
-Net Interconnect area:           10516.618808
+Net Interconnect area:           10214.687911
 
-Total cell area:                 32881.250000
-Total area:                      43397.868808
+Total cell area:                 31330.000000
+Total area:                      41544.687911
 1
