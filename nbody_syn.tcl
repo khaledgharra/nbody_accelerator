@@ -12,7 +12,8 @@ remove_design -all
 # Variables
 set DESIGN_NAME nbody_accelerator
 set CLK_NAME    clk
-set CLK_PERIOD  15
+set CLK_PERIOD  10
+set CLK_UNCERTAINTY 1.5
 
 # Make includes searchable from the current folder
 set_app_var search_path [concat [list . [pwd]] $search_path]
@@ -36,6 +37,12 @@ check_design
 
 # Clock constraint
 create_clock -name $CLK_NAME -period $CLK_PERIOD -waveform {0 5} [get_ports $CLK_NAME]
+
+# Reserve part of the period as margin (jitter/skew/OCV guardband), so DC
+# is forced to close as if the clock were shorter than it really is -
+# this is what actually produces real slack at the real period, unlike
+# just relaxing CLK_PERIOD (which only ever converges back to ~0 slack).
+set_clock_uncertainty $CLK_UNCERTAINTY [get_clocks $CLK_NAME]
 
 # Basic I/O constraints for backend/floorplan exercise
 set_input_delay  0 -clock $CLK_NAME [remove_from_collection [all_inputs] [get_ports $CLK_NAME]]
