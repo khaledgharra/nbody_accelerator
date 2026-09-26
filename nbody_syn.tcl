@@ -62,6 +62,10 @@ redirect -file reports/power.rpt  { report_power }
 # Netlist for Innovus / floorplan
 write -hierarchy -format verilog -output nbody_accelerator_syn.v
 
+# SDC for Innovus - generated from this exact session so P&R times
+# against precisely what was synthesized (same clock period + uncertainty).
+write_sdc nbody.sdc
+
 puts "============================================================"
 puts "SYNTHESIS FINISHED SUCCESSFULLY"
 puts "Generated netlist: nbody_accelerator_syn.v"

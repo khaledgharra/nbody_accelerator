@@ -1,0 +1,51 @@
+============================================================
+  nbody_accelerator — Innovus Place & Route (core-only, no pad ring)
+============================================================
+
+Prerequisite: nbody_accelerator_syn.v and nbody.sdc must exist in the
+repo root (produced by ../nbody_syn.tcl in Design Vision). Both are
+referenced by nbody.globals / mmmc.view using ../ paths, so run
+Innovus from inside this innovus/ folder.
+
+RUNNING FROM SCRATCH:
+
+  cd innovus
+  innovus &
+  (in Innovus console:)
+    source nbody.globals
+    init_design
+    dbGet head.sites.name        <- should say CoreSite
+    source floorplan.tcl
+    placeDesign
+    source cts.tcl
+    setNanoRouteMode -routeWithTimingDriven false -routeWithSiDriven false
+    setNanoRouteMode -drouteFixAntenna true
+    routeDesign
+    verify_drc
+    verify_connectivity
+    saveDesign ./results/nbody_final.enc
+
+  Do not run optDesign -postRoute unless you've checked what it does to
+  the timing/DRC tradeoff already made earlier in the flow (same caveat
+  as the i2c flow in des/innovus/).
+
+RESTORING A SAVED DESIGN:
+
+  cd innovus
+  innovus &
+  (in Innovus console:)
+    restoreDesign ./results/nbody_final.enc/nbody_final.enc.dat nbody_accelerator
+
+DIFFERENCES FROM THE i2c FLOW (des/innovus/ in the snn repo):
+
+- No pad ring: no top.v wrapper, no top.io, no PIO320SL LEF/lib files.
+  RTL ports land directly as pins on the core boundary.
+- Ring/stripes use plain M5(top/bottom)/M4(left/right) - i2c's TOP_M
+  ring was sized around its PIO320SL pad cells, which don't exist here.
+- No placement/routing blockages - those existed in i2c's floorplan.tcl
+  specifically to keep cells/signals out of the pad ring margin, which
+  is irrelevant with no pads.
+- Floorplan uses -r <aspect> <utilization> (65%) instead of i2c's
+  explicit -d <die size> - i2c's die size was driven by fitting a fixed
+  pad ring; here Innovus just sizes the core from cell area directly.
+============================================================
