@@ -1,0 +1,85 @@
+Loading db file '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : nbody_accelerator
+Version: R-2020.09-SP2
+Date   : Sat Sep 26 19:06:03 2026
+****************************************
+
+
+Library(s) Used:
+
+    tsl18fs120_typ (File: /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
+
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+nbody_accelerator      35000             tsl18fs120_typ
+body_regfile           16000             tsl18fs120_typ
+nbody_core             35000             tsl18fs120_typ
+pair_rom               ForQA             tsl18fs120_typ
+fp_add                 4000              tsl18fs120_typ
+fp_mul                 4000              tsl18fs120_typ
+fp_sqrt                4000              tsl18fs120_typ
+fp_div                 4000              tsl18fs120_typ
+nbody_core_DW01_dec_0  ForQA             tsl18fs120_typ
+fp_div_DW_cmp_0        4000              tsl18fs120_typ
+fp_sqrt_DW_cmp_0       4000              tsl18fs120_typ
+fp_mul_DW01_add_0_DW01_add_6
+                       ForQA             tsl18fs120_typ
+fp_add_DW01_inc_0_DW01_inc_4
+                       ForQA             tsl18fs120_typ
+nbody_core_DW01_add_4_DW01_add_8
+                       ForQA             tsl18fs120_typ
+nbody_core_DW01_add_6_DW01_add_10
+                       ForQA             tsl18fs120_typ
+fp_div_DW01_add_0_DW01_add_12
+                       ForQA             tsl18fs120_typ
+fp_add_DW_cmp_3        4000              tsl18fs120_typ
+fp_div_DW01_sub_3      4000              tsl18fs120_typ
+fp_sqrt_DW01_sub_1     4000              tsl18fs120_typ
+fp_add_DW01_sub_8      ForQA             tsl18fs120_typ
+fp_mul_DW_mult_uns_2   4000              tsl18fs120_typ
+fp_add_DW01_sub_12     4000              tsl18fs120_typ
+fp_add_DW01_sub_13     ForQA             tsl18fs120_typ
+fp_add_DW01_add_4      4000              tsl18fs120_typ
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  21.7344 mW   (98%)
+  Net Switching Power  = 347.4059 uW    (2%)
+                         ---------
+Total Dynamic Power    =  22.0818 mW  (100%)
+
+Cell Leakage Power     = 712.7377 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          21.5578        7.4351e-03        3.7732e+05           21.5656  (  97.66%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1765            0.3400        3.3542e+05            0.5169  (   2.34%)
+--------------------------------------------------------------------------------------------------
+Total             21.7343 mW         0.3474 mW     7.1274e+05 pW        22.0825 mW
+1

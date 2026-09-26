@@ -1,0 +1,1409 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'nbody_accelerator' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : nbody_accelerator
+Version: R-2020.09-SP2
+Date   : Sat Sep 26 19:06:02 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vyj_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+  fp_add_DW01_sub_8  ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U229/ZN (inv0d2)                           0.05       8.66 f
+  u_core/u_add/sub_317/B[1] (fp_add_DW01_sub_8)           0.00       8.66 f
+  u_core/u_add/sub_317/U104/ZN (inv0d2)                   0.06       8.72 r
+  u_core/u_add/sub_317/U90/ZN (nd02d1)                    0.09       8.80 f
+  u_core/u_add/sub_317/U93/Z (ora21d2)                    0.18       8.98 f
+  u_core/u_add/sub_317/U92/ZN (inv0d4)                    0.08       9.06 r
+  u_core/u_add/sub_317/U75/ZN (nd02d2)                    0.05       9.11 f
+  u_core/u_add/sub_317/U77/Z (an02d1)                     0.11       9.22 f
+  u_core/u_add/sub_317/U37/Z (xr02d1)                     0.21       9.43 r
+  u_core/u_add/sub_317/DIFF[3] (fp_add_DW01_sub_8)        0.00       9.43 r
+  u_core/u_add/U237/Z (aor22d1)                           0.15       9.58 r
+  u_core/u_add/s[26] (fp_add)                             0.00       9.58 r
+  u_core/U181/ZN (invbd2)                                 0.12       9.69 f
+  u_core/U2335/ZN (oai222d1)                              0.19       9.88 r
+  u_core/vyj_reg[26]/D (dfnrq2)                           0.00       9.88 r
+  data arrival time                                                  9.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vyj_reg[26]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
+  --------------------------------------------------------------------------
+  data required time                                                 9.88
+  data arrival time                                                 -9.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vyi_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+  fp_add_DW01_sub_8  ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U229/ZN (inv0d2)                           0.05       8.66 f
+  u_core/u_add/sub_317/B[1] (fp_add_DW01_sub_8)           0.00       8.66 f
+  u_core/u_add/sub_317/U104/ZN (inv0d2)                   0.06       8.72 r
+  u_core/u_add/sub_317/U90/ZN (nd02d1)                    0.09       8.80 f
+  u_core/u_add/sub_317/U93/Z (ora21d2)                    0.18       8.98 f
+  u_core/u_add/sub_317/U92/ZN (inv0d4)                    0.08       9.06 r
+  u_core/u_add/sub_317/U75/ZN (nd02d2)                    0.05       9.11 f
+  u_core/u_add/sub_317/U77/Z (an02d1)                     0.11       9.22 f
+  u_core/u_add/sub_317/U37/Z (xr02d1)                     0.21       9.43 r
+  u_core/u_add/sub_317/DIFF[3] (fp_add_DW01_sub_8)        0.00       9.43 r
+  u_core/u_add/U237/Z (aor22d1)                           0.15       9.58 r
+  u_core/u_add/s[26] (fp_add)                             0.00       9.58 r
+  u_core/U181/ZN (invbd2)                                 0.12       9.69 f
+  u_core/U2338/ZN (oai222d1)                              0.19       9.88 r
+  u_core/vyi_reg[26]/D (dfnrq2)                           0.00       9.88 r
+  data arrival time                                                  9.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vyi_reg[26]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
+  --------------------------------------------------------------------------
+  data required time                                                 9.88
+  data arrival time                                                 -9.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vzj_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+  fp_add_DW01_sub_8  ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U229/ZN (inv0d2)                           0.05       8.66 f
+  u_core/u_add/sub_317/B[1] (fp_add_DW01_sub_8)           0.00       8.66 f
+  u_core/u_add/sub_317/U104/ZN (inv0d2)                   0.06       8.72 r
+  u_core/u_add/sub_317/U90/ZN (nd02d1)                    0.09       8.80 f
+  u_core/u_add/sub_317/U93/Z (ora21d2)                    0.18       8.98 f
+  u_core/u_add/sub_317/U92/ZN (inv0d4)                    0.08       9.06 r
+  u_core/u_add/sub_317/U75/ZN (nd02d2)                    0.05       9.11 f
+  u_core/u_add/sub_317/U77/Z (an02d1)                     0.11       9.22 f
+  u_core/u_add/sub_317/U37/Z (xr02d1)                     0.21       9.43 r
+  u_core/u_add/sub_317/DIFF[3] (fp_add_DW01_sub_8)        0.00       9.43 r
+  u_core/u_add/U237/Z (aor22d1)                           0.15       9.58 r
+  u_core/u_add/s[26] (fp_add)                             0.00       9.58 r
+  u_core/U181/ZN (invbd2)                                 0.12       9.69 f
+  u_core/U2336/ZN (oai222d1)                              0.19       9.88 r
+  u_core/vzj_reg[26]/D (dfnrq2)                           0.00       9.88 r
+  data arrival time                                                  9.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vzj_reg[26]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
+  --------------------------------------------------------------------------
+  data required time                                                 9.88
+  data arrival time                                                 -9.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vzi_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+  fp_add_DW01_sub_8  ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U229/ZN (inv0d2)                           0.05       8.66 f
+  u_core/u_add/sub_317/B[1] (fp_add_DW01_sub_8)           0.00       8.66 f
+  u_core/u_add/sub_317/U104/ZN (inv0d2)                   0.06       8.72 r
+  u_core/u_add/sub_317/U90/ZN (nd02d1)                    0.09       8.80 f
+  u_core/u_add/sub_317/U93/Z (ora21d2)                    0.18       8.98 f
+  u_core/u_add/sub_317/U92/ZN (inv0d4)                    0.08       9.06 r
+  u_core/u_add/sub_317/U75/ZN (nd02d2)                    0.05       9.11 f
+  u_core/u_add/sub_317/U77/Z (an02d1)                     0.11       9.22 f
+  u_core/u_add/sub_317/U37/Z (xr02d1)                     0.21       9.43 r
+  u_core/u_add/sub_317/DIFF[3] (fp_add_DW01_sub_8)        0.00       9.43 r
+  u_core/u_add/U237/Z (aor22d1)                           0.15       9.58 r
+  u_core/u_add/s[26] (fp_add)                             0.00       9.58 r
+  u_core/U181/ZN (invbd2)                                 0.12       9.69 f
+  u_core/U2339/ZN (oai222d1)                              0.19       9.88 r
+  u_core/vzi_reg[26]/D (dfnrq2)                           0.00       9.88 r
+  data arrival time                                                  9.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vzi_reg[26]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
+  --------------------------------------------------------------------------
+  data required time                                                 9.88
+  data arrival time                                                 -9.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vxi_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+  fp_add_DW01_sub_8  ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U229/ZN (inv0d2)                           0.05       8.66 f
+  u_core/u_add/sub_317/B[1] (fp_add_DW01_sub_8)           0.00       8.66 f
+  u_core/u_add/sub_317/U104/ZN (inv0d2)                   0.06       8.72 r
+  u_core/u_add/sub_317/U90/ZN (nd02d1)                    0.09       8.80 f
+  u_core/u_add/sub_317/U93/Z (ora21d2)                    0.18       8.98 f
+  u_core/u_add/sub_317/U92/ZN (inv0d4)                    0.08       9.06 r
+  u_core/u_add/sub_317/U75/ZN (nd02d2)                    0.05       9.11 f
+  u_core/u_add/sub_317/U77/Z (an02d1)                     0.11       9.22 f
+  u_core/u_add/sub_317/U37/Z (xr02d1)                     0.21       9.43 r
+  u_core/u_add/sub_317/DIFF[3] (fp_add_DW01_sub_8)        0.00       9.43 r
+  u_core/u_add/U237/Z (aor22d1)                           0.15       9.58 r
+  u_core/u_add/s[26] (fp_add)                             0.00       9.58 r
+  u_core/U181/ZN (invbd2)                                 0.12       9.69 f
+  u_core/U2337/ZN (oai222d1)                              0.19       9.88 r
+  u_core/vxi_reg[26]/D (dfnrq2)                           0.00       9.88 r
+  data arrival time                                                  9.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vxi_reg[26]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
+  --------------------------------------------------------------------------
+  data required time                                                 9.88
+  data arrival time                                                 -9.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vxj_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+  fp_add_DW01_sub_8  ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U229/ZN (inv0d2)                           0.05       8.66 f
+  u_core/u_add/sub_317/B[1] (fp_add_DW01_sub_8)           0.00       8.66 f
+  u_core/u_add/sub_317/U104/ZN (inv0d2)                   0.06       8.72 r
+  u_core/u_add/sub_317/U90/ZN (nd02d1)                    0.09       8.80 f
+  u_core/u_add/sub_317/U93/Z (ora21d2)                    0.18       8.98 f
+  u_core/u_add/sub_317/U92/ZN (inv0d4)                    0.08       9.06 r
+  u_core/u_add/sub_317/U75/ZN (nd02d2)                    0.05       9.11 f
+  u_core/u_add/sub_317/U77/Z (an02d1)                     0.11       9.22 f
+  u_core/u_add/sub_317/U37/Z (xr02d1)                     0.21       9.43 r
+  u_core/u_add/sub_317/DIFF[3] (fp_add_DW01_sub_8)        0.00       9.43 r
+  u_core/u_add/U237/Z (aor22d1)                           0.15       9.58 r
+  u_core/u_add/s[26] (fp_add)                             0.00       9.58 r
+  u_core/U181/ZN (invbd2)                                 0.12       9.69 f
+  u_core/U2334/ZN (oai222d1)                              0.19       9.88 r
+  u_core/vxj_reg[26]/D (dfnrq2)                           0.00       9.88 r
+  data arrival time                                                  9.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vxj_reg[26]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
+  --------------------------------------------------------------------------
+  data required time                                                 9.88
+  data arrival time                                                 -9.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vyj_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U284/ZN (inv0d7)                           0.03       8.64 f
+  u_core/u_add/U296/ZN (nd02d1)                           0.10       8.74 r
+  u_core/u_add/U630/ZN (inv0d4)                           0.04       8.78 f
+  u_core/u_add/U73/ZN (invbd7)                            0.05       8.84 r
+  u_core/u_add/U103/ZN (inv0d7)                           0.04       8.88 f
+  u_core/u_add/U914/ZN (aoi22d1)                          0.11       8.99 r
+  u_core/u_add/U915/ZN (oai221d1)                         0.13       9.12 f
+  u_core/u_add/U939/ZN (aoi21d1)                          0.18       9.30 r
+  u_core/u_add/U940/ZN (aon211d1)                         0.10       9.40 f
+  u_core/u_add/U494/ZN (nr02d1)                           0.10       9.49 r
+  u_core/u_add/U774/ZN (aon211d1)                         0.08       9.57 f
+  u_core/u_add/U511/ZN (inv0d2)                           0.08       9.65 r
+  u_core/u_add/U465/ZN (inv0d4)                           0.04       9.69 f
+  u_core/u_add/s[19] (fp_add)                             0.00       9.69 f
+  u_core/U210/ZN (invbda)                                 0.04       9.73 r
+  u_core/U2245/ZN (oai222d1)                              0.11       9.83 f
+  u_core/vyj_reg[19]/D (dfnrq2)                           0.00       9.83 f
+  data arrival time                                                  9.83
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vyj_reg[19]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  --------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -9.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vzi_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U284/ZN (inv0d7)                           0.03       8.64 f
+  u_core/u_add/U296/ZN (nd02d1)                           0.10       8.74 r
+  u_core/u_add/U630/ZN (inv0d4)                           0.04       8.78 f
+  u_core/u_add/U73/ZN (invbd7)                            0.05       8.84 r
+  u_core/u_add/U103/ZN (inv0d7)                           0.04       8.88 f
+  u_core/u_add/U914/ZN (aoi22d1)                          0.11       8.99 r
+  u_core/u_add/U915/ZN (oai221d1)                         0.13       9.12 f
+  u_core/u_add/U939/ZN (aoi21d1)                          0.18       9.30 r
+  u_core/u_add/U940/ZN (aon211d1)                         0.10       9.40 f
+  u_core/u_add/U494/ZN (nr02d1)                           0.10       9.49 r
+  u_core/u_add/U774/ZN (aon211d1)                         0.08       9.57 f
+  u_core/u_add/U511/ZN (inv0d2)                           0.08       9.65 r
+  u_core/u_add/U465/ZN (inv0d4)                           0.04       9.69 f
+  u_core/u_add/s[19] (fp_add)                             0.00       9.69 f
+  u_core/U210/ZN (invbda)                                 0.04       9.73 r
+  u_core/U2246/ZN (oai222d1)                              0.11       9.83 f
+  u_core/vzi_reg[19]/D (dfnrq2)                           0.00       9.83 f
+  data arrival time                                                  9.83
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vzi_reg[19]/CP (dfnrq2)                          0.00      10.00 r
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  --------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -9.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vxj_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U284/ZN (inv0d7)                           0.03       8.64 f
+  u_core/u_add/U296/ZN (nd02d1)                           0.10       8.74 r
+  u_core/u_add/U630/ZN (inv0d4)                           0.04       8.78 f
+  u_core/u_add/U73/ZN (invbd7)                            0.05       8.84 r
+  u_core/u_add/U103/ZN (inv0d7)                           0.04       8.88 f
+  u_core/u_add/U914/ZN (aoi22d1)                          0.11       8.99 r
+  u_core/u_add/U915/ZN (oai221d1)                         0.13       9.12 f
+  u_core/u_add/U433/ZN (inv0d1)                           0.10       9.22 r
+  u_core/u_add/U247/ZN (inv0d1)                           0.04       9.26 f
+  u_core/u_add/U916/ZN (aoi22d1)                          0.12       9.38 r
+  u_core/u_add/U246/ZN (oai221d2)                         0.28       9.66 f
+  u_core/u_add/s[11] (fp_add)                             0.00       9.66 f
+  u_core/U56/ZN (inv0d7)                                  0.07       9.73 r
+  u_core/U2130/ZN (oai222d1)                              0.09       9.82 f
+  u_core/vxj_reg[11]/D (dfnrn1)                           0.00       9.82 f
+  data arrival time                                                  9.82
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vxj_reg[11]/CP (dfnrn1)                          0.00      10.00 r
+  library setup time                                     -0.18       9.82
+  data required time                                                 9.82
+  --------------------------------------------------------------------------
+  data required time                                                 9.82
+  data arrival time                                                 -9.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_core/mul_a_reg[21]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/vxi_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  nbody_accelerator  35000                 tsl18fs120_typ
+  nbody_core         35000                 tsl18fs120_typ
+  fp_mul_DW_mult_uns_2
+                     4000                  tsl18fs120_typ
+  fp_mul             4000                  tsl18fs120_typ
+  fp_add_DW_cmp_3    4000                  tsl18fs120_typ
+  fp_add             4000                  tsl18fs120_typ
+  fp_add_DW01_sub_13 ForQA                 tsl18fs120_typ
+  fp_add_DW01_sub_12 4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/mul_a_reg[21]/CP (dfnrq4)                        0.00 #     0.00 r
+  u_core/mul_a_reg[21]/Q (dfnrq4)                         0.29       0.29 f
+  u_core/u_mul/a[21] (fp_mul)                             0.00       0.29 f
+  u_core/u_mul/mult_53/a[21] (fp_mul_DW_mult_uns_2)       0.00       0.29 f
+  u_core/u_mul/mult_53/U1883/ZN (inv0d4)                  0.06       0.35 r
+  u_core/u_mul/mult_53/U2271/ZN (inv0d7)                  0.04       0.39 f
+  u_core/u_mul/mult_53/U1829/ZN (inv0d2)                  0.04       0.43 r
+  u_core/u_mul/mult_53/U2268/ZN (nd02d2)                  0.04       0.47 f
+  u_core/u_mul/mult_53/U2269/ZN (nd02d2)                  0.08       0.55 r
+  u_core/u_mul/mult_53/U2713/ZN (nd02d2)                  0.08       0.63 f
+  u_core/u_mul/mult_53/U2069/Z (buffd7)                   0.15       0.78 f
+  u_core/u_mul/mult_53/U1628/ZN (oai22d2)                 0.21       0.99 r
+  u_core/u_mul/mult_53/U1623/Z (xr03d1)                   0.34       1.33 f
+  u_core/u_mul/mult_53/U623/CO (ad01d1)                   0.30       1.63 f
+  u_core/u_mul/mult_53/U616/S (ad01d1)                    0.35       1.99 r
+  u_core/u_mul/mult_53/U1680/Z (xr03d2)                   0.35       2.33 f
+  u_core/u_mul/mult_53/U2344/ZN (nd02d1)                  0.09       2.42 r
+  u_core/u_mul/mult_53/U2646/ZN (inv0d1)                  0.04       2.47 f
+  u_core/u_mul/mult_53/U2416/ZN (aoim21d1)                0.11       2.57 r
+  u_core/u_mul/mult_53/U190/ZN (oai21d1)                  0.06       2.64 f
+  u_core/u_mul/mult_53/U188/ZN (aoi21d1)                  0.13       2.77 r
+  u_core/u_mul/mult_53/U1730/Z (ora21d1)                  0.14       2.91 r
+  u_core/u_mul/mult_53/U1910/ZN (inv0d1)                  0.04       2.95 f
+  u_core/u_mul/mult_53/U86/ZN (aoi21d1)                   0.13       3.08 r
+  u_core/u_mul/mult_53/U2474/ZN (oaim21d1)                0.08       3.16 f
+  u_core/u_mul/mult_53/U1953/ZN (inv0d1)                  0.07       3.23 r
+  u_core/u_mul/mult_53/U1951/ZN (nd02d2)                  0.05       3.28 f
+  u_core/u_mul/mult_53/U1952/ZN (nd02d2)                  0.08       3.36 r
+  u_core/u_mul/mult_53/U2579/ZN (inv0d4)                  0.04       3.40 f
+  u_core/u_mul/mult_53/product[47] (fp_mul_DW_mult_uns_2)
+                                                          0.00       3.40 f
+  u_core/u_mul/U14/ZN (inv0d2)                            0.06       3.46 r
+  u_core/u_mul/U56/Z (bufbd7)                             0.12       3.58 r
+  u_core/u_mul/U34/ZN (inv0da)                            0.03       3.61 f
+  u_core/u_mul/U26/Z (mx02d1)                             0.19       3.81 r
+  u_core/u_mul/p[3] (fp_mul)                              0.00       3.81 r
+  u_core/U206/ZN (inv0d1)                                 0.05       3.86 f
+  u_core/U64/ZN (oai21d2)                                 0.24       4.10 r
+  u_core/u_add/b[3] (fp_add)                              0.00       4.10 r
+  u_core/u_add/gt_267_2/A[3] (fp_add_DW_cmp_3)            0.00       4.10 r
+  u_core/u_add/gt_267_2/U566/ZN (inv0d2)                  0.04       4.14 f
+  u_core/u_add/gt_267_2/U507/ZN (nr02d2)                  0.07       4.21 r
+  u_core/u_add/gt_267_2/U83/ZN (oai21d1)                  0.06       4.27 f
+  u_core/u_add/gt_267_2/U81/ZN (aoi21d1)                  0.14       4.41 r
+  u_core/u_add/gt_267_2/U66/ZN (oai21d1)                  0.07       4.47 f
+  u_core/u_add/gt_267_2/U35/ZN (aoi21d1)                  0.14       4.62 r
+  u_core/u_add/gt_267_2/U558/Z (ora21d1)                  0.11       4.73 r
+  u_core/u_add/gt_267_2/GE_LT_GT_LE (fp_add_DW_cmp_3)     0.00       4.73 r
+  u_core/u_add/U568/ZN (aoi31d4)                          0.25       4.98 f
+  u_core/u_add/U183/Z (mx02d1)                            0.22       5.20 r
+  u_core/u_add/sub_275/B[5] (fp_add_DW01_sub_13)          0.00       5.20 r
+  u_core/u_add/sub_275/U106/ZN (inv0d2)                   0.05       5.25 f
+  u_core/u_add/sub_275/U136/ZN (nr02d2)                   0.14       5.38 r
+  u_core/u_add/sub_275/U21/ZN (oai21d1)                   0.07       5.45 f
+  u_core/u_add/sub_275/U9/ZN (aoi21d1)                    0.19       5.64 r
+  u_core/u_add/sub_275/U69/ZN (nd02d2)                    0.07       5.72 f
+  u_core/u_add/sub_275/U100/ZN (nd02d1)                   0.09       5.80 r
+  u_core/u_add/sub_275/U102/ZN (nd02d2)                   0.07       5.87 f
+  u_core/u_add/sub_275/DIFF[7] (fp_add_DW01_sub_13)       0.00       5.87 f
+  u_core/u_add/U541/ZN (nr02d2)                           0.10       5.98 r
+  u_core/u_add/U650/Z (an04d4)                            0.22       6.20 r
+  u_core/u_add/U84/ZN (inv0d7)                            0.04       6.24 f
+  u_core/u_add/U641/ZN (nr02d1)                           0.10       6.34 r
+  u_core/u_add/U634/ZN (nd03d2)                           0.09       6.43 f
+  u_core/u_add/U826/ZN (nd02d2)                           0.07       6.50 r
+  u_core/u_add/sub_280/B[9] (fp_add_DW01_sub_12)          0.00       6.50 r
+  u_core/u_add/sub_280/U451/ZN (inv0d2)                   0.03       6.54 f
+  u_core/u_add/sub_280/U464/ZN (nr02d2)                   0.08       6.62 r
+  u_core/u_add/sub_280/U358/ZN (oai21d2)                  0.18       6.80 f
+  u_core/u_add/sub_280/U462/Z (aor21d1)                   0.22       7.02 f
+  u_core/u_add/sub_280/U314/ZN (aoi21d1)                  0.18       7.20 r
+  u_core/u_add/sub_280/U340/ZN (nd02d2)                   0.06       7.26 f
+  u_core/u_add/sub_280/U113/ZN (xn02d1)                   0.16       7.42 f
+  u_core/u_add/sub_280/DIFF[13] (fp_add_DW01_sub_12)      0.00       7.42 f
+  u_core/u_add/U390/Z (mx02d2)                            0.20       7.63 f
+  u_core/u_add/U278/Z (bufbd3)                            0.10       7.73 f
+  u_core/u_add/U273/ZN (nr02d2)                           0.06       7.79 r
+  u_core/u_add/U275/ZN (inv0d1)                           0.04       7.83 f
+  u_core/u_add/U274/ZN (nr03d1)                           0.18       8.01 r
+  u_core/u_add/U252/ZN (nd03d1)                           0.10       8.11 f
+  u_core/u_add/U428/ZN (invbd2)                           0.07       8.18 r
+  u_core/u_add/U402/ZN (inv0d4)                           0.03       8.21 f
+  u_core/u_add/U533/ZN (inv0d4)                           0.07       8.28 r
+  u_core/u_add/U209/ZN (nd02d1)                           0.08       8.37 f
+  u_core/u_add/U147/Z (an04d4)                            0.18       8.55 f
+  u_core/u_add/U90/ZN (inv0d7)                            0.06       8.61 r
+  u_core/u_add/U284/ZN (inv0d7)                           0.03       8.64 f
+  u_core/u_add/U296/ZN (nd02d1)                           0.10       8.74 r
+  u_core/u_add/U630/ZN (inv0d4)                           0.04       8.78 f
+  u_core/u_add/U73/ZN (invbd7)                            0.05       8.84 r
+  u_core/u_add/U103/ZN (inv0d7)                           0.04       8.88 f
+  u_core/u_add/U914/ZN (aoi22d1)                          0.11       8.99 r
+  u_core/u_add/U915/ZN (oai221d1)                         0.13       9.12 f
+  u_core/u_add/U433/ZN (inv0d1)                           0.10       9.22 r
+  u_core/u_add/U247/ZN (inv0d1)                           0.04       9.26 f
+  u_core/u_add/U916/ZN (aoi22d1)                          0.12       9.38 r
+  u_core/u_add/U246/ZN (oai221d2)                         0.28       9.66 f
+  u_core/u_add/s[11] (fp_add)                             0.00       9.66 f
+  u_core/U56/ZN (inv0d7)                                  0.07       9.73 r
+  u_core/U2133/ZN (oai222d1)                              0.09       9.82 f
+  u_core/vxi_reg[11]/D (dfnrn1)                           0.00       9.82 f
+  data arrival time                                                  9.82
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_core/vxi_reg[11]/CP (dfnrn1)                          0.00      10.00 r
+  library setup time                                     -0.18       9.82
+  data required time                                                 9.82
+  --------------------------------------------------------------------------
+  data required time                                                 9.82
+  data arrival time                                                 -9.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
