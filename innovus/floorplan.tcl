@@ -10,8 +10,13 @@ puts "=== STEP 1: Floorplan ==="
 floorPlan -site CoreSite -r 1.0 0.65 5 5 5 5
 
 puts "=== STEP 2: Connect global power/ground nets ==="
-globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
+# -module {} registers this as a persistent connect RULE (matches
+# des/innovus/glnets.src), not a one-time pass - without it, any cell
+# added later by optDesign/CTS/filler has no PG connection at all.
+globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+globalNetConnect VDD -type tiehi -module {}
+globalNetConnect VSS -type tielo -module {}
 deselectAll
 
 puts "=== STEP 3: Add core power ring ==="
