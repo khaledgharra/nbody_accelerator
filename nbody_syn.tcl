@@ -12,7 +12,7 @@ remove_design -all
 # Variables
 set DESIGN_NAME nbody_accelerator
 set CLK_NAME    clk
-set CLK_PERIOD  10
+set CLK_PERIOD  14
 set CLK_UNCERTAINTY 1.5
 
 # Make includes searchable from the current folder
