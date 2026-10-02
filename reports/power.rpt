@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : nbody_accelerator
 Version: R-2020.09-SP2
-Date   : Sat Sep 26 19:43:02 2026
+Date   : Fri Oct  2 22:09:18 2026
 ****************************************
 
 
@@ -36,12 +36,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  22.8233 mW   (98%)
-  Net Switching Power  = 487.7232 uW    (2%)
+  Cell Internal Power  =  16.2250 mW   (98%)
+  Net Switching Power  = 321.8794 uW    (2%)
                          ---------
-Total Dynamic Power    =  23.3110 mW  (100%)
+Total Dynamic Power    =  16.5469 mW  (100%)
 
-Cell Leakage Power     = 747.3169 nW
+Cell Leakage Power     = 669.2403 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -51,9 +51,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          22.7004        1.0902e-02        3.5460e+05           22.7116  (  97.43%)
+register          16.1362        8.4203e-03        3.4855e+05           16.1450  (  97.57%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.1229            0.4768        3.9271e+05            0.6001  (   2.57%)
+combinational  8.8965e-02            0.3135        3.2069e+05            0.4027  (   2.43%)
 --------------------------------------------------------------------------------------------------
-Total             22.8233 mW         0.4877 mW     7.4732e+05 pW        23.3117 mW
+Total             16.2251 mW         0.3219 mW     6.6924e+05 pW        16.5477 mW
 1

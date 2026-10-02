@@ -1,0 +1,53 @@
+[09/26 19:53:47      0s] 
+[09/26 19:53:47      0s] Cadence Innovus(TM) Implementation System.
+[09/26 19:53:47      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/26 19:53:47      0s] 
+[09/26 19:53:47      0s] Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+[09/26 19:53:47      0s] Options:	
+[09/26 19:53:47      0s] Date:		Sat Sep 26 19:53:47 2026
+[09/26 19:53:47      0s] Host:		vlsi-luna71 (x86_64 w/Linux 6.19.13-1.el8.elrepo.x86_64) (20cores*20cpus*Intel(R) Core(TM) Ultra 7 265 30720KB)
+[09/26 19:53:47      0s] OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+[09/26 19:53:47      0s] 
+[09/26 19:53:47      0s] License:
+[09/26 19:53:47      0s] 		[19:53:47.069617] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+[09/26 19:53:47      0s] 		invs	Innovus Implementation System	23.1	checkout succeeded
+[09/26 19:53:47      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/26 19:53:47      0s] **WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+[09/26 19:53:57      7s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+[09/26 19:53:59      9s] @(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+[09/26 19:53:59      9s] @(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+[09/26 19:53:59      9s] @(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+[09/26 19:53:59      9s] @(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+[09/26 19:53:59      9s] @(#)CDS: CPE v23.13-s062
+[09/26 19:53:59      9s] @(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+[09/26 19:53:59      9s] @(#)CDS: OA 22.61-p018 Fri Oct 18 10:45:49 2024
+[09/26 19:53:59      9s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[09/26 19:53:59      9s] @(#)CDS: RCDB 11.15.0
+[09/26 19:53:59      9s] @(#)CDS: STYLUS 23.14-s002_1 (09/11/2024 13:54 PDT)
+[09/26 19:53:59      9s] @(#)CDS: IntegrityPlanner-23.13-16927 (23.13) (2024-10-14 10:21:59+0800)
+[09/26 19:53:59      9s] @(#)CDS: SYNTHESIS_ENGINE 23.13-s072
+[09/26 19:53:59      9s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1659669_397206db-68d8-4b57-93f4-adfa3e3dee47_vlsi-luna71_epkgms_R8opNT.
+
+[09/26 19:53:59      9s] Change the soft stacksize limit to 0.2%RAM (127 mbytes). Set global soft_stack_size_limit to change the value.
+[09/26 19:54:00      9s] Info: Process UID = 1659669 / 397206db-68d8-4b57-93f4-adfa3e3dee47 / TMvcMjsNLe
+[09/26 19:54:00      9s] source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+[09/26 19:54:00      9s] Loading attribute definitions from mini dummy db...
+[09/26 19:54:00     10s] Info: Defined 23820 Synthesis attributes
+[09/26 19:54:00     10s] Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+[09/26 19:54:00     10s] source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+[09/26 19:54:01     10s] 
+[09/26 19:54:01     10s] **INFO:  MMMC transition support version v31-84 
+[09/26 19:54:01     10s] 
+[09/26 19:54:01     10s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/26 19:54:01     10s] <CMD> suppressMessage ENCEXT-2799
+[09/26 19:54:01     10s] <CMD> getVersion
+[09/26 19:54:01     10s] <CMD> getVersion
+[09/26 19:54:01     10s] <CMD> getVersion
+[09/26 19:54:02     10s] [INFO] Loading PVS 24.10 fill procedures
+[09/26 19:54:02     10s] **WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+[09/26 19:54:16     10s] 
+[09/26 19:54:16     10s] *** Memory Usage v#2 (Current mem = 1745.969M, initial mem = 839.484M) ***
+[09/26 19:54:16     10s] *** Message Summary: 0 warning(s), 0 error(s)
+[09/26 19:54:16     10s] 
+[09/26 19:54:16     10s] --- Ending "Innovus" (totcpu=0:00:11.0, real=0:00:29.0, mem=1746.0M) ---

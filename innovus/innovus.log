@@ -1,0 +1,38 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+Options:	
+Date:		Sat Sep 26 19:53:47 2026
+Host:		vlsi-luna71 (x86_64 w/Linux 6.19.13-1.el8.elrepo.x86_64) (20cores*20cpus*Intel(R) Core(TM) Ultra 7 265 30720KB)
+OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+
+License:
+		[19:53:47.069617] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+Change the soft stacksize limit to 0.2%RAM (127 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 1659669 / 397206db-68d8-4b57-93f4-adfa3e3dee47 / TMvcMjsNLe
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+Loading attribute definitions from mini dummy db...
+Info: Defined 23820 Synthesis attributes
+Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 24.10 fill procedures
+**WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+
+*** Memory Usage v#2 (Current mem = 1745.969M, initial mem = 839.484M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:11.0, real=0:00:29.0, mem=1746.0M) ---
