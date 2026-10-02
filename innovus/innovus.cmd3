@@ -1,0 +1,485 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Oct  2 22:17:26 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+#@(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+#@(#)CDS: CPE v23.13-s062
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+set defHierChar /
+set init_verilog ../nbody_accelerator_syn.v
+set init_top_cell nbody_accelerator
+set init_mmmc_file mmmc.view
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_assign_buffer 1
+setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+set delaycal_input_transition_delay 120ps
+set conf_in_tran_delay 120.0ps
+set conf_ioOri R0
+set init_abstract_view abstract
+set init_layout_view layout
+set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef}
+set init_design_uniquify 1
+set load_netlist_ignore_undefined_cell 1
+set init_verilog_tolerate_port_mismatch 0
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+floorPlan -site CoreSite -r 1.0 0.65 5 5 5 5
+globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+globalNetConnect VDD -type tiehi -module {}
+globalNetConnect VSS -type tielo -module {}
+deselectAll
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer M5 -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -around core -layer {top M5 bottom M5 left M4 right M4} -width 2 -spacing 1 -center 1
+getPlaceMode -place_hierarchical_flow -quiet
+report_message -start_cmd
+getRouteMode -maxRouteLayer -quiet
+getRouteMode -user -maxRouteLayer
+getPlaceMode -place_global_place_io_pins -quiet
+getPlaceMode -user -maxRouteLayer
+getPlaceMode -quiet -adaptiveFlowMode
+getPlaceMode -timingDriven -quiet
+getPlaceMode -adaptive -quiet
+getPlaceMode -relaxSoftBlockageMode -quiet
+getPlaceMode -user -relaxSoftBlockageMode
+getPlaceMode -ignoreScan -quiet
+getPlaceMode -user -ignoreScan
+getPlaceMode -repairPlace -quiet
+getPlaceMode -user -repairPlace
+getPlaceMode -inPlaceOptMode -quiet
+getPlaceMode -quiet -bypassFlowEffortHighChecking
+getDesignMode -quiet -siPrevention
+getPlaceMode -quiet -place_global_exp_enable_3d
+getPlaceMode -quiet -place_global_exp_ignore_intra_ilm_out_of_corebox_check
+getPlaceMode -exp_slack_driven -quiet
+um::push_snapshot_stack
+getDesignMode -quiet -flowEffort
+getDesignMode -highSpeedCore -quiet
+getPlaceMode -quiet -adaptive
+set spgFlowInInitialPlace 1
+getPlaceMode -sdpAlignment -quiet
+getPlaceMode -softGuide -quiet
+getPlaceMode -useSdpGroup -quiet
+getPlaceMode -sdpAlignment -quiet
+getPlaceMode -enableDbSaveAreaPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+getPlaceMode -sdpPlace -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -sdpPlace -quiet
+getPlaceMode -groupHighLevelClkGate -quiet
+setvar spgRptErrorForScanConnection 0
+getPlaceMode -place_global_exp_allow_missing_scan_chain -quiet
+getPlaceMode -place_check_library -quiet
+getPlaceMode -place_detail_exp_enable_3d_hdb -quiet
+getPlaceMode -place_global_exp_heterogeneous_3d_placement -quiet
+getPlaceMode -trimView -quiet
+getPlaceMode -expTrimOptBeforeTDGP -quiet
+getPlaceMode -quiet -useNonTimingDeleteBufferTree
+getPlaceMode -congEffort -quiet
+getPlaceMode -relaxSoftBlockageMode -quiet
+getPlaceMode -user -relaxSoftBlockageMode
+getPlaceMode -ignoreScan -quiet
+getPlaceMode -user -ignoreScan
+getPlaceMode -repairPlace -quiet
+getPlaceMode -user -repairPlace
+getPlaceMode -congEffort -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -timingDriven -quiet
+getPlaceMode -user -timingDriven
+getPlaceMode -fastFp -quiet
+getPlaceMode -clusterMode -quiet
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+getPlaceMode -inPlaceOptMode -quiet
+getPlaceMode -quiet -bypassFlowEffortHighChecking
+getPlaceMode -ultraCongEffortFlow -quiet
+getPlaceMode -forceTiming -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -timingDriven -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -powerDriven -quiet
+getExtractRCMode -quiet -engine
+getAnalysisMode -quiet -clkSrcPath
+getAnalysisMode -quiet -clockPropagation
+getAnalysisMode -quiet -cppr
+setExtractRCMode -engine preRoute
+setAnalysisMode -clkSrcPath false -clockPropagation forcedIdeal
+getPlaceMode -exp_slack_driven -quiet
+isAnalysisModeSetup
+getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+getPlaceMode -quiet -NMPsuppressInfo
+getPlaceMode -quiet -place_global_exp_wns_focus_v2
+getPlaceMode -quiet -place_incr_exp_isolation_flow
+getPlaceMode -wl_budget_mode -quiet
+setPlaceMode -reset -place_global_exp_balance_buffer_chain
+getPlaceMode -wl_budget_mode -quiet
+setPlaceMode -reset -place_global_exp_balance_pipeline
+getPlaceMode -place_global_exp_balance_buffer_chain -quiet
+getPlaceMode -place_global_exp_balance_pipeline -quiet
+getPlaceMode -tdgpMemFlow -quiet
+getPlaceMode -user -resetCombineRFLevel
+getPlaceMode -quiet -resetCombineRFLevel
+setPlaceMode -resetCombineRFLevel 1000
+setvar spgSpeedupBuildVSM 1
+getPlaceMode -tdgpResetCteTG -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -place_global_replace_QP -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -enableDistPlace -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -place_global_ignore_spare -quiet
+getPlaceMode -quiet -expNewFastMode
+setPlaceMode -expHiddenFastMode 1
+setPlaceMode -reset -ignoreScan
+getPlaceMode -quiet -place_global_exp_auto_finish_floorplan
+getPlaceMode -quiet -IOSlackAdjust
+getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+set_global timing_enable_zero_delay_analysis_mode true
+getPlaceMode -quiet -useNonTimingDeleteBufferTree
+getPlaceMode -quiet -prePlaceOptSimplifyNetlist
+getPlaceMode -quiet -enablePrePlaceOptimizations
+getPlaceMode -quiet -prePlaceOptDecloneInv
+deleteBufferTree -decloneInv
+getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+set_global timing_enable_zero_delay_analysis_mode false
+getAnalysisMode -quiet -honorClockDomains
+getPlaceMode -honorUserPathGroup -quiet
+getAnalysisMode -quiet -honorClockDomains
+set delaycal_use_default_delay_limit 101
+set delaycal_default_net_delay 0
+set delaycal_default_net_load 0
+set delaycal_default_net_load_ignore_for_ilm 0
+set delaycal_input_transition_delay 1ps
+getAnalysisMode -clkSrcPath -quiet
+getAnalysisMode -clockPropagation -quiet
+getAnalysisMode -checkType -quiet
+buildTimingGraph
+getDelayCalMode -ignoreNetLoad -quiet
+getDelayCalMode -ignoreNetLoad -quiet
+setDelayCalMode -ignoreNetLoad true -quiet
+get_global timing_enable_path_group_priority
+get_global timing_constraint_enable_group_path_resetting
+set_global timing_enable_path_group_priority false
+set_global timing_constraint_enable_group_path_resetting false
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2reg_tmp.56119 -from {0x51 0x54} -to 0x55 -ignore_source_of_trigger_arc
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2out_tmp.56119 -from {0x58 0x5b} -to 0x5c -ignore_source_of_trigger_arc
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2reg_tmp.56119 -from 0x5e -to 0x5f
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2out_tmp.56119 -from 0x62 -to 0x63
+setPathGroupOptions reg2reg_tmp.56119 -effortLevel high
+get_capacitance_unit
+isAnalysisModeSetup
+getAnalysisMode -analysisType -quiet
+isAnalysisModeSetup
+all_setup_analysis_views
+all_hold_analysis_views
+get_analysis_view $view -delay_corner
+get_delay_corner $dcCorner -power_domain_list
+get_delay_corner $dcCorner -library_set
+get_library_set $libSetName -si
+get_delay_corner $dcCorner -late_library_set
+get_delay_corner $dcCorner -early_library_set
+get_analysis_view $view -delay_corner
+get_delay_corner $dcCorner -power_domain_list
+get_delay_corner $dcCorner -library_set
+get_library_set $libSetName -si
+get_delay_corner $dcCorner -late_library_set
+get_delay_corner $dcCorner -early_library_set
+reset_path_group -name reg2out_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name in2reg_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name in2out_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name reg2reg_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+setDelayCalMode -ignoreNetLoad false
+set delaycal_use_default_delay_limit 1000
+set delaycal_default_net_delay 1000ps
+set delaycal_input_transition_delay 120ps
+set delaycal_default_net_load 0.5pf
+set delaycal_default_net_load_ignore_for_ilm 0
+all_setup_analysis_views
+getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+getPlaceMode -exp_slack_driven -quiet
+getAnalysisMode -quiet -honorClockDomains
+getPlaceMode -quiet -expSkipGP
+getPlaceMode -quiet -place_global_exp_inverter_rewiring
+getPlaceMode -quiet -place_global_exp_enable_wdir_incrP_handoff
+getPlaceMode -ignoreUnproperPowerInit -quiet
+getPlaceMode -quiet -expSkipGP
+setDelayCalMode -engine feDc
+createBasicPathGroups -quiet
+psp::embedded_egr_init_
+psp::embedded_egr_term_
+psp::embedded_egr_init_
+psp::embedded_egr_term_
+reset_path_group
+set_global _is_ipo_interactive_path_groups 0
+scanReorder
+setDelayCalMode -engine aae
+all_setup_analysis_views
+getPlaceMode -exp_slack_driven -quiet
+set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+get_ccopt_clock_trees *
+getPlaceMode -exp_insert_guidance_clock_tree -quiet
+getPlaceMode -exp_cluster_based_high_fanout_buffering -quiet
+getPlaceMode -quiet -place_global_exp_heterogeneous_3d_placement
+getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_high_effort_density_smoother
+getPlaceMode -quiet -timingEffort
+getPlaceMode -quiet -place_detail_exp_enable_full_fgc_in_pod
+getPlaceMode -quiet -place_detail_refinePlace_v3
+getPlaceMode -quiet -place_detail_refinePlace_v2
+getPlaceMode -quiet -place_detail_refinePlace_v2_pa_fgc_prects_on
+getAnalysisMode -quiet -honorClockDomains
+getPlaceMode -honorUserPathGroup -quiet
+getAnalysisMode -quiet -honorClockDomains
+set delaycal_use_default_delay_limit 101
+set delaycal_default_net_delay 0
+set delaycal_default_net_load 0
+set delaycal_default_net_load_ignore_for_ilm 0
+set delaycal_input_transition_delay 1ps
+getAnalysisMode -clkSrcPath -quiet
+getAnalysisMode -clockPropagation -quiet
+getAnalysisMode -checkType -quiet
+buildTimingGraph
+getDelayCalMode -ignoreNetLoad -quiet
+getDelayCalMode -ignoreNetLoad -quiet
+setDelayCalMode -ignoreNetLoad true -quiet
+get_global timing_enable_path_group_priority
+get_global timing_constraint_enable_group_path_resetting
+set_global timing_enable_path_group_priority false
+set_global timing_constraint_enable_group_path_resetting false
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2reg_tmp.56119 -from {0x6c 0x6f} -to 0x70 -ignore_source_of_trigger_arc
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2out_tmp.56119 -from {0x73 0x76} -to 0x77 -ignore_source_of_trigger_arc
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2reg_tmp.56119 -from 0x79 -to 0x7a
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2out_tmp.56119 -from 0x7d -to 0x7e
+setPathGroupOptions reg2reg_tmp.56119 -effortLevel high
+reset_path_group -name reg2out_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name in2reg_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name in2out_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name reg2reg_tmp.56119
+set_global _is_ipo_interactive_path_groups 0
+setDelayCalMode -ignoreNetLoad false
+set delaycal_use_default_delay_limit 1000
+set delaycal_default_net_delay 1000ps
+set delaycal_input_transition_delay 120ps
+set delaycal_default_net_load 0.5pf
+set delaycal_default_net_load_ignore_for_ilm 0
+all_setup_analysis_views
+getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -quiet -cong_repair_commit_clock_net_route_attr
+getPlaceMode -enableDbSaveAreaPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+setPlaceMode -reset -improveWithPsp
+getPlaceMode -quiet -debugGlobalPlace
+getPlaceMode -congRepair -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -user -rplaceIncrNPClkGateAwareMode
+getPlaceMode -user -congRepairMaxIter
+getPlaceMode -quiet -congRepairPDClkGateMode4
+setPlaceMode -rplaceIncrNPClkGateAwareMode 4
+getPlaceMode -quiet -expCongRepairPDOneLoop
+setPlaceMode -congRepairMaxIter 1
+getPlaceMode -quickCTS -quiet
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+getPlaceMode -congRepairForceTrialRoute -quiet
+getPlaceMode -user -congRepairForceTrialRoute
+setPlaceMode -congRepairForceTrialRoute true
+::goMC::is_advanced_metrics_collection_running
+congRepair
+::goMC::is_advanced_metrics_collection_running
+::goMC::is_advanced_metrics_collection_running
+::goMC::is_advanced_metrics_collection_running
+setPlaceMode -reset -congRepairForceTrialRoute
+getPlaceMode -quiet -congRepairPDClkGateMode4
+setPlaceMode -reset -rplaceIncrNPClkGateAwareMode
+setPlaceMode -reset -congRepairMaxIter
+getPlaceMode -congRepairCleanupPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+all_setup_analysis_views
+getPlaceMode -exp_slack_driven -quiet
+set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_high_effort_density_smoother
+getPlaceMode -quiet -timingEffort
+getPlaceMode -tdgpDumpStageTiming -quiet
+getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+getPlaceMode -trimView -quiet
+getOptMode -quiet -viewOptPolishing
+getOptMode -quiet -fastViewOpt
+spInternalUse deleteViewOptManager
+spInternalUse tdgp clearSkpData
+setAnalysisMode -clkSrcPath true -clockPropagation sdcControl
+getPlaceMode -exp_slack_driven -quiet
+setExtractRCMode -engine preRoute
+setPlaceMode -reset -relaxSoftBlockageMode
+setPlaceMode -reset -ignoreScan
+setPlaceMode -reset -repairPlace
+getPlaceMode -quiet -NMPsuppressInfo
+setvar spgSpeedupBuildVSM 0
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -place_global_replace_QP -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -place_global_ignore_spare -quiet
+getPlaceMode -tdgpMemFlow -quiet
+setPlaceMode -reset -resetCombineRFLevel
+getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+setPlaceMode -reset -expHiddenFastMode
+getPlaceMode -tcg2Pass -quiet
+getPlaceMode -quiet -wireLenOptEffort
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -doRPlace -quiet
+getPlaceMode -RTCPlaceDesignFlow -quiet
+getPlaceMode -quickCTS -quiet
+set spgFlowInInitialPlace 0
+getPlaceMode -user -maxRouteLayer
+spInternalUse TDGP resetIgnoreNetLoad
+getPlaceMode -place_global_exp_balance_pipeline -quiet
+getDesignMode -quiet -flowEffort
+report_message -end_cmd
+um::create_snapshot -name final -auto min
+um::pop_snapshot_stack
+um::create_snapshot -name place_design
+getPlaceMode -exp_slack_driven -quiet
+fit
+zoomBox 448.72000 363.70200 452.49800 366.53600
+zoomBox 450.81900 365.06200 450.83000 365.07000
+zoomBox 447.99700 363.23800 453.05000 367.02900
+zoomBox 80.66900 125.59200 743.07400 622.55700
+zoomBox -3150.91500 -1965.10300 3294.62000 2870.61400
+zoomBox 244.97900 172.38400 494.80700 359.81600
+zoomBox 265.51800 185.31200 477.87300 344.63000
+zoomBox 338.01200 230.94300 418.10300 291.03100
+zoomBox 371.74000 252.17300 390.29300 266.09200
+fit
+setDesignMode -process 180
+clockDesign
+optDesign -postCTS
+zoomBox -24.87500 481.00100 -24.86400 481.00900
+zoomBox -25.03800 480.84600 -24.71300 481.09000
+zoomOut
+fit
+zoomBox -26.18700 313.12400 -16.17400 320.63600
+zoomBox -125.19500 124.01300 457.14700 560.91100
+zoomBox -5.87400 344.38300 53.97500 389.28400
+zoomBox -3.82400 348.16900 47.04800 386.33500
+zoomBox 1.15300 364.50800 9.66800 370.89600
+zoomBox -78.44600 103.36400 606.93500 617.56600
+zoomBox -7628.70200 -24668.95200 57265.01200 24017.10000
+zoomBox -12423.41400 -40400.36200 93245.16200 38876.74300
+fit
+routeDesign
+zoomBox 50.10900 432.41400 407.55700 700.58700
+uiSetTool stretchWire
+zoomOut
+fit
+setLayerPreference text -isVisible 1
+setLayerPreference pinObj -isVisible 1
+setLayerPreference M1 -isVisible 0
+setLayerPreference M1 -isVisible 1
+setLayerPreference TOP_M -isVisible 0
+setLayerPreference TOP_V -isVisible 0
+setLayerPreference M5 -isVisible 0
+setLayerPreference V5 -isVisible 0
+setLayerPreference M4 -isVisible 0
+setLayerPreference V4 -isVisible 0
+setLayerPreference M3 -isVisible 0
+setLayerPreference V3 -isVisible 0
+setLayerPreference M2 -isVisible 0
+setLayerPreference V2 -isVisible 0
+zoomBox 342.91800 329.02500 369.46100 348.93900
+zoomBox 354.29900 338.01300 355.97700 339.27200
+zoomBox 343.43300 330.70700 366.04700 347.67300
+zoomBox 240.96900 261.82200 461.02500 426.91700
+zoomBox -1.06000 99.10900 685.37900 614.10500
+zoomBox -4974.76100 -3826.62200 4270.10000 3109.27000
+zoomBox -5922.87100 -4574.96300 4953.43600 3584.91000
+zoomBox -8350.55800 -6491.13000 6703.15600 4802.81300
+zoomBox -1324.48100 -945.46300 1639.21000 1278.02500
+zoomBox -154.28700 -21.83000 795.80700 690.97100
+fit
+zoomBox 530.96600 234.82300 613.75900 296.93800
+zoomBox 562.34100 246.99700 599.07800 274.55900
+zoomBox 577.92800 253.04400 591.78500 263.44000
+zoomBox 585.50500 255.98500 588.23500 258.03300
+zoomBox 573.03200 247.99100 595.62600 264.94200
+selectInst {u_core/b_jm_reg[17]}
+fit
+setLayerPreference V2 -isVisible 1
+setLayerPreference M2 -isVisible 1
+setLayerPreference V3 -isVisible 1
+setLayerPreference M3 -isVisible 1
+setLayerPreference V4 -isVisible 1
+setLayerPreference M4 -isVisible 1
+setLayerPreference V5 -isVisible 1
+setLayerPreference M5 -isVisible 1
+setLayerPreference TOP_V -isVisible 1
+setLayerPreference TOP_M -isVisible 1
+deselectAll
+zoomIn
+zoomIn
+zoomIn
+zoomIn
+zoomIn
+fit
+zoomIn
+zoomOut
+zoomBox -48.46200 270.99800 255.36900 498.94500
+zoomBox -41.50800 288.36000 216.74800 482.11500
+zoomBox -12.04500 370.90500 31.17600 403.33100
+zoomBox -11.15700 373.39400 25.58100 400.95600
+zoomBox -153.92100 239.35800 203.56600 507.56000
+zoomBox -491.14600 -77.25100 623.99200 759.37300
+zoomIn
+is_innovus_plus
+fit

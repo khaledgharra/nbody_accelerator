@@ -43161,3 +43161,4 @@ source nbody_syn.tcl
 #@ puts "============================================================"
 #@ # -- End source nbody_syn.tcl
 
+quit
